@@ -33,7 +33,7 @@ jobs:
         with:
           path: docs/
 
-  # Deploy the artifact to GitHub pages.
+  # Deploy the artifact to GitHub.
   # This is a separate job so that only actions/deploy-pages has the necessary permissions.
   deploy:
     needs: build
@@ -43,7 +43,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://github.com/CMRiggs/HW1Testing/tree/main/docs
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy@v1
