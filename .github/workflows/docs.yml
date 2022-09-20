@@ -30,6 +30,8 @@ jobs:
       - run: pdoc -o docs/ --force --html src/*.py
       - run: git status
       - run: git add .
+      - run: git config --global user.email "cmriggs@ncsu.com"
+      - run: git config --global user.name "Collin Riggs"
       - run: git commit -m "Auto updating Documentation"
       - run: git fetch origin master
       - run: git push origin HEAD:master
