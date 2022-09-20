@@ -28,7 +28,6 @@ jobs:
       # ADJUST THIS: build your documentation into docs/.
       # We use a custom build script for pdoc itself, ideally you just run `pdoc -o docs/ ...` here.
       - run: pdoc -o docs/ --force --html src/*.py
-      - run: git remote set-url --push origin ${{ secrets.ssh }}
       - run: git status
       - run: git add .
       - run: git commit -m "Auto updating Documentation"
