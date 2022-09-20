@@ -46,4 +46,4 @@ jobs:
       url: https://github.com/CMRiggs/HW1Testing/tree/main/docs
     steps:
       - id: deployment
-        uses: actions/deploy@v1
+        uses: actions/deploy-main@v1
