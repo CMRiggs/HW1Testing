@@ -28,22 +28,9 @@ jobs:
       # ADJUST THIS: build your documentation into docs/.
       # We use a custom build script for pdoc itself, ideally you just run `pdoc -o docs/ ...` here.
       - run: pdoc -o docs/ --force --html src/*.py
-
-      - uses: actions/upload-artifact@v3
-        with:
-          path: docs/
-
-  # Deploy the artifact to GitHub.
-  # This is a separate job so that only actions/deploy-pages has the necessary permissions.
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: https://github.com/CMRiggs/HW1Testing/tree/main/docs
-    steps:
-      - id: deployment
-        uses: actions/deploy-main@v1
+      - run: git remote set-url origin ${{ secrets.ssh }}
+      - run: git status
+      - run: git add .
+      - run: git commit -m "Auto updating Documentation"
+      - run: git fetch origin master
+      - run: git push origin HEAD:master
