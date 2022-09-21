@@ -7,7 +7,7 @@ class Cols:
     # names is a table
     def __init__(self, names):
         """Creates a list containing all of the columns. Creates column
-        objects as Nums or Syms depending on the name of the column. ANOTHER CHANGE I GUESS
+        objects as Nums or Syms depending on the name of the column.
         
         Parameters:
         names (list): List of the names of all the columns"""
@@ -18,6 +18,7 @@ class Cols:
         self.klass = None
         self.x = []
         self.y = []
+        print("Test")
 
         # Left names as a dict, but can easily be changed to list
         # if wanted. c would be index and s would be value at index
