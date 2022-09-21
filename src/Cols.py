@@ -7,7 +7,7 @@ class Cols:
     # names is a table
     def __init__(self, names):
         """Creates a list containing all of the columns. Creates column
-        objects as Nums or Syms depending on the name of the column.
+        objects as Nums or Syms depending on the name of the column. ADDING TEST DOCUMENTATION BECAUSE I DIDN"T CHECK WOOPS
         
         Parameters:
         names (list): List of the names of all the columns"""
